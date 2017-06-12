@@ -1,0 +1,15 @@
+<template name="game">
+	<div class="inner-container">
+		<ul class="list row">
+			{{#each games}}
+				{{> gameItem}}	
+			{{/each}}
+		</ul>
+	</div>
+</template>
+
+<template name="gameItem">
+	<li class="list-item col-md-2 text-center">
+		<a href="{{pathFor 'room' type}}"><img src="{{this.icon}}" alt="{{this.name}}" title="{{this.name}}"></a>
+	</li>
+</template>

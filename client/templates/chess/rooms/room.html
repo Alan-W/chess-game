@@ -1,0 +1,28 @@
+<template name="room">
+	<div class="inner-container">
+		<ul class="list">
+			<li class="list-item add-room col-md-1 text-center">
+				<a href="#" id="addRoom" data-toggle="modal" data-target="#addRoomModal" data-gameId={{gameId}}>
+					<img src="/imgs/plus.jpg" alt="创建房间" title ="创建房间" class="add-room">
+				</a>
+				<span class="create-room">创建房间</span>
+			</li>
+			{{#each rooms}}
+				{{> roomItem}}
+			{{/each}}
+		</ul>
+	</div>
+	{{> addRoomModal}}
+</template>
+
+<template name="roomItem">
+	<li class="list-item col-md-1 text-center">
+		<a href="javascript:void(0)" class="{{#if canEnter.condition }} enter {{else}} room-reject-modal{{/if}}">
+			<span class="room-state">{{canEnter.txt}}</span>
+			<img src="/imgs/room.jpg" alt="room" title="游戏房间">
+			<span class="reject-modal">该房间人数已满!</span>
+		</a>
+		
+		<span class="room-name">{{name}}</span>
+	</li>
+</template>

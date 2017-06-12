@@ -1,0 +1,110 @@
+
+/* line 1, ../sass/_common.scss
+body {
+  background-color: #1d2939;
+  font-family: miscrosoft yahei;
+  line-height: 21px;
+  color: #636e7b;
+  font-size: 14px;
+}
+
+line 8, ../sass/_common.scss
+a {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+line 13, ../sass/_common.scss
+a:hover {
+  color: #636e7b;
+  text-decoration: none;
+}
+
+line 3, ../sass/client.scss
+.leftpanel {
+  width: 220px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+line 8, ../sass/client.scss
+.leftpanel .logo {
+  background-color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-right: 1px solid #eee;
+}
+line 13, ../sass/client.scss
+.leftpanel .logo a {
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  font-style: normal;
+}
+line 20, ../sass/client.scss
+.leftpanel .leftnav {
+  padding: 5px 15px;
+}
+line 22, ../sass/client.scss
+.leftpanel .leftnav .sidebartitle {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 10px;
+}
+line 29, ../sass/client.scss
+.leftpanel .leftnav .nav .nav-item a {
+  color: #94989d;
+  font-size: 13px;
+  display: block;
+  padding: 5px 0 5px 27px;
+  transition: all 0.2s ease-out 0s;
+}
+line 38, ../sass/client.scss
+.leftpanel .leftnav .nav-barcket {
+  margin-bottom: 30px;
+}
+line 41, ../sass/client.scss
+.leftpanel .leftnav .nav-barcket > li.nav-active > a {
+  background-color: #FFF;
+  color: #1d2939;
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+line 49, ../sass/client.scss
+.leftpanel .leftnav .nav-barcket .nav-item a .glyphicon {
+  font-size: 15px;
+  margin-right: 10px;
+  width: 16px;
+  vertical-align: middle;
+  text-align: center;
+  top: auto;
+}
+line 57, ../sass/client.scss
+.leftpanel .leftnav .nav-barcket .nav-item a:hover {
+  background-color: #fff;
+  color: #1d2939;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shdow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+line 68, ../sass/client.scss
+.main {
+  margin-left: 220px;
+  background-color: #FFF;
+}
+line 71, ../sass/client.scss
+.main .navbar {
+  border: none;
+}
+line 73, ../sass/client.scss
+.main .navbar .navbar-right {
+  margin-right: 0;
+}
+line 77, ../sass/client.scss
+.main .contaner {
+  background-color: #FFF;
+  border-top: 1px solid #eee;
+}
+ */

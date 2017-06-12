@@ -1,0 +1,30 @@
+<template name="adminLogin">
+	<div class="container">
+		<div class="jumbotron login-title">
+			<h2>残疾人游戏大厅管理系统</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+				<form class="login-form">
+					<div class="form-group">
+						<label for="emailInput">帐号</label>
+						<input type="email" class="form-control" id="emailInput" placeholder="请输入邮箱地址">
+					</div>
+					<div class="form-group">
+						<label for="passwordInput">密码</label>
+						<input type="password" class="form-control" id="passwordInput" placeholder="请输入你的密码">
+					</div>
+					<!-- {{#if errorMessage}} -->
+						<div class="alert alert-danger {{activeShow}}" role="alert">{{errorMessage}}</div>
+					<!-- {{/if}}	 -->
+					<div class="row">
+						<div class="col-md-2 col-md-offset-5 col-xs-2 col-xs-offset-5">
+							<button type="submit" class="btn btn-primary">登录</button>		
+						</div>
+						<!-- <div></div> -->
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</template>

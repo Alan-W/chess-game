@@ -1,0 +1,41 @@
+<template name="adminUser">
+	<div class="user-container">
+		<div class="content-area">
+			<table class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<th>用户</th>
+						<th>邮箱</th>
+						<th>证件号</th>
+						<th>注册时间</th>
+						<th>地区</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each users}}
+						{{> userRow}}
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+<!-- 		<div id="user-pagination" class="container">
+			{{#each pageSetting}}
+				{{> pagination}}
+			{{/each}}
+		</div> -->
+	</div>
+</template>
+
+<template name = "userRow">
+	<tr >
+		<td><img src={{imgurl}} width="25">{{userinfo}}</td>
+		<td>{{email}}</td>
+		<td>{{cjid}}</td>
+		<td>{{createTimeStamp}}</td>
+		<td>{{city}}</td>
+		<td>
+			<div class="btn btn-primary" id="edit-btn">编辑</div>
+		</td>
+	</tr>
+</template>

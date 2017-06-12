@@ -1,0 +1,7 @@
+node_modules/
+.iml
+.idea/
+sass/
+.scss
+.sass-cache/
+config.rb

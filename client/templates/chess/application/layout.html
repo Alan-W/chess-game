@@ -1,0 +1,50 @@
+<template name = "layout">
+	<div class="leftpanel">
+		<div class="logo">
+			<a href="{{pathFor 'welcome'}}">Client Logo</a>
+		</div>
+		<div class="leftnav">
+			<h5 class="sidebartitle">导航</h5>
+			<ul class="nav nav-pills nav-stacked nav-bracket">
+				<li class = "{{activeRouteClass 'info'}}  nav-item info">
+					<a class="" href="{{pathFor 'info'}}">
+						<i class = "glyphicon glyphicon-user"></i>
+						<span>个人中心</span>
+					</a>
+				</li>
+				<li class="{{activeRouteClass 'game' 'room'}} nav-item game">
+					<a class="" href="{{pathFor 'game'}}">
+						<i class="glyphicon glyphicon-home"></i>
+						<span>游戏大厅</span>
+					</a>
+				</li>
+				<li class="{{activeRouteClass 'match'}}  nav-item match">
+					<a class="" href="{{pathFor 'match'}}">
+						<i class="glyphicon glyphicon-eur"></i>
+						<span>比赛</span>
+					</a>
+				</li>
+				<li class="{{activeRouteClass 'news'}}  nav-item news">
+					<a class="" href="{{pathFor 'news'}}">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<span>消息</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="navbar nav-default" role="navigation">
+			<div class="nav-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					{{> loginButtons align="right"}}
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div class="wrapper">
+				{{> yield}}
+			</div>
+		</div>
+	</div>
+</template>

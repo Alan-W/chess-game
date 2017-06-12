@@ -1,0 +1,27 @@
+<!-- 分页 -->
+<template name="pagination">
+	<div class="row fixed-pagination">
+		<div class="col-md-12 col-lg-12 col-xs-12 ">
+			<nav class=" navbar">
+			  <ul class="pagination">
+			    <li id="pagination-previous" class={{previousDisable}}>
+			      <a href="javascript:void(0)" aria-label="Previous" >
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+				    	{{#each pages}}
+							{{> pagination_li}}
+				    	{{/each}}
+			    <li id="pagination-next">
+			      <a href="javascript:void(0)" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>	
+		</div>
+	</div>
+</template>
+<template name="pagination_li">
+	<li id={{idx}} class={{active}}><a href="{{pathFor path currIdx=num }}" >{{num}}</a></li>
+</template>

@@ -1,0 +1,40 @@
+<TEMPLATE name="adminLayout">
+	<div class="navbar-header top-header">
+		<div class="imgcontainer">
+			<a href="http://www.baidu.com" class="thumbnail comp-logo">
+		</a>
+		</div>
+		<div class="comp-name"><span>景联网</span></div>
+		{{#if currentUser}}
+			<div class="btn btn-danger log-btn" id="logout">{{currentUser.profile.wxinfo.nickname}}&nbsp;/&nbsp;登出</div>
+		{{else}}
+			<div class="btn btn-primary log-btn" id="login">登录</div>
+		{{/if}}
+		
+	</div>
+	{{> errors}}
+	<div class="left-panel">
+		<ul class = " nav list-group">
+			<li class="{{activeRouteClass 'admin.user'}} list-group-item" >
+				<a href="{{pathFor 'admin.user' currIdx=1}}" ><i class="glyphicon glyphicon-user"></i><span>用&nbsp;户</span></a>
+			</li>
+			<li class="{{activeRouteClass 'admin.match'}} list-group-item" >
+				<a href="{{pathFor 'admin.match' currIdx=1}}" ><i class="glyphicon glyphicon-th-list"></i><span>比&nbsp;赛</span></a></li>
+			<li class=" {{activeRouteClass 'admin.admin'}} list-group-item" >
+				<a href="{{pathFor 'admin.admin'}}" ><i class="glyphicon glyphicon-user"></i><span>管理员</span></a>
+			</li>
+			<li class="{{activeRouteClass 'admin.site'}} list-group-item" >
+				<a href="{{pathFor 'admin.site'}}" ><i class="glyphicon glyphicon-home"></i><span>门&nbsp;户</span></a>
+			</li>
+<!-- 			<li class="{{activeRouteClass 'admin.site'}} list-group-item">
+				<a href="/" ><i class="glyphicon glyphicon-home"></i><span>{{foo}}</span></a>
+			</li> -->
+		</ul>
+	</div>
+	<div class="main-container">
+		<div class="container">
+			{{> yield}}	
+		</div>
+		
+	</div>
+</TEMPLATE>

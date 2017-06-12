@@ -1,0 +1,381 @@
+/* line 3, ../sass/_common.scss */
+body {
+  background-color: #1d2939;
+  font-family: miscrosoft yahei;
+  line-height: 21px;
+  color: #636e7b;
+  font-size: 14px;
+}
+
+/* line 10, ../sass/_common.scss */
+html, body, p, div, a, ul, ol, li, section, iframe, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 14, ../sass/_common.scss */
+body {
+  min-width: 1200px;
+  min-height: 800px;
+}
+
+/* line 18, ../sass/_common.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 21, ../sass/_common.scss */
+a {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 26, ../sass/_common.scss */
+a:hover {
+  color: #636e7b;
+  text-decoration: none;
+}
+
+/* line 30, ../sass/_common.scss */
+#spinner {
+  height: 300px;
+}
+
+/* line 33, ../sass/_common.scss */
+.jumbotron {
+  text-align: center;
+}
+
+/* line 36, ../sass/_common.scss */
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+/* line 40, ../sass/_common.scss */
+.errors {
+  position: fixed;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+
+/* line 51, ../sass/_common.scss */
+.modal .modal-content {
+  position: relative;
+}
+/* line 56, ../sass/_common.scss */
+.modal .modal-content .modal-body .form-horizontal .form-group .col-sm-2, .modal .modal-content .modal-body .form-horizontal .form-group .col-sm-10 {
+  margin-top: 20px;
+}
+
+/* line 65, ../sass/_common.scss */
+.errors {
+  position: absolute;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  right: 0px;
+  pointer-events: none;
+}
+
+/* line 73, ../sass/_common.scss */
+.alert {
+  animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  width: 250px;
+  float: right;
+  clear: both;
+  margin-bottom: 5px;
+  pointer-events: auto;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 4, ../sass/client.scss */
+.leftpanel {
+  width: 220px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 9, ../sass/client.scss */
+.leftpanel .logo {
+  background-color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-right: 1px solid #eee;
+}
+/* line 14, ../sass/client.scss */
+.leftpanel .logo a {
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  font-style: normal;
+}
+/* line 21, ../sass/client.scss */
+.leftpanel .leftnav {
+  padding: 5px 15px;
+}
+/* line 23, ../sass/client.scss */
+.leftpanel .leftnav .sidebartitle {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 10px;
+}
+/* line 30, ../sass/client.scss */
+.leftpanel .leftnav .nav li a {
+  color: #94989d;
+  font-size: 13px;
+  display: block;
+  padding: 5px 0 5px 27px;
+  transition: all 0.2s ease-out 0s;
+}
+/* line 39, ../sass/client.scss */
+.leftpanel .leftnav .nav-bracket {
+  margin-bottom: 30px;
+}
+/* line 42, ../sass/client.scss */
+.leftpanel .leftnav .nav-bracket li.nav-active a {
+  background-color: #FFF;
+  color: #1d2939;
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+/* line 50, ../sass/client.scss */
+.leftpanel .leftnav .nav-bracket li a .glyphicon {
+  font-size: 15px;
+  margin-right: 10px;
+  width: 16px;
+  vertical-align: middle;
+  text-align: center;
+  top: auto;
+}
+/* line 58, ../sass/client.scss */
+.leftpanel .leftnav .nav-bracket li a:hover {
+  background-color: #fff;
+  color: #1d2939;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shdow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 69, ../sass/client.scss */
+.main {
+  margin-left: 220px;
+  background-color: #FFF;
+}
+/* line 72, ../sass/client.scss */
+.main .navbar {
+  border: none;
+  margin-bottom: 0;
+}
+/* line 75, ../sass/client.scss */
+.main .navbar .navbar-right {
+  margin-right: 0;
+}
+/* line 79, ../sass/client.scss */
+.main .container {
+  width: 100%;
+  height: 700px;
+  background-color: #FFF;
+  border-top: 1px solid #eee;
+}
+/* line 86, ../sass/client.scss */
+.main .container .wrapper .inner-container .list {
+  padding: 20px 30px;
+}
+/* line 88, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item {
+  min-width: 110px;
+  min-height: 110px;
+  position: relative;
+}
+/* line 92, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item a {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #eee;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 120px;
+  margin: 30px 0 0;
+  text-align: center;
+}
+/* line 101, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item a .room-state {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 120px;
+  margin: 0 15px;
+  text-align: center;
+}
+/* line 109, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item a img {
+  width: 80px;
+  max-height: 80px;
+  vertical-align: middle;
+}
+/* line 114, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item a .reject-modal {
+  position: absolute;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 120px;
+  background-color: #000;
+  opacity: 0;
+  color: #fff;
+  top: 30px;
+  text-align: center;
+  left: 15px;
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+/* line 133, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item a.room-reject-modal:hover .reject-modal {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity: .5;
+}
+/* line 139, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item .room-name {
+  display: block;
+  margin-top: 10px;
+  width: 120px;
+}
+/* line 144, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item .create-room {
+  display: block;
+  margin-top: 10px;
+}
+/* line 148, ../sass/client.scss */
+.main .container .wrapper .inner-container .list .list-item .reject-active {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+/* line 157, ../sass/client.scss */
+.chesswrapper {
+  position: fixed;
+  background: url("/imgs/bg.jpg") repeat;
+  width: 100%;
+  height: 100%;
+}
+/* line 162, ../sass/client.scss */
+.chesswrapper .chess-box {
+  width: 589px;
+  height: 660px;
+  margin: 50px auto;
+  background: url("/imgs/bg.png") no-repeat;
+  background-size: 100%;
+}
+/* line 169, ../sass/client.scss */
+.chesswrapper .quit-wrapper {
+  position: fixed;
+  top: 30px;
+  left: 100px;
+}
+/* line 173, ../sass/client.scss */
+.chesswrapper .quit-wrapper input {
+  -moz-transform: all ease-in 1s;
+  -ms-transform: all ease-in 1s;
+  -webkit-transform: all ease-in 1s;
+  transform: all ease-in 1s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 184, ../sass/client.scss */
+.chesswrapper .prepare-wrapper {
+  position: fixed;
+  top: 30px;
+  left: 180px;
+}
+/* line 188, ../sass/client.scss */
+.chesswrapper .prepare-wrapper input {
+  -moz-transform: all ease-in 1s;
+  -ms-transform: all ease-in 1s;
+  -webkit-transform: all ease-in 1s;
+  transform: all ease-in 1s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 197, ../sass/client.scss */
+.chesswrapper .prepare-wrapper input:visited {
+  -moz-box-shadow: 0 0 0 0 #357935;
+  -webkit-box-shadow: 0 0 0 0 #357935;
+  box-shadow: 0 0 0 0 #357935;
+}
+/* line 205, ../sass/client.scss */
+.chesswrapper .begin-wrapper {
+  position: fixed;
+  top: 30px;
+  left: 260px;
+}
+/* line 210, ../sass/client.scss */
+.chesswrapper .info-wrapper {
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  width: 200px;
+}
+/* line 216, ../sass/client.scss */
+.chesswrapper .info-wrapper .user-info {
+  margin-bottom: 30px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+/* line 221, ../sass/client.scss */
+.chesswrapper .info-wrapper .user-info p {
+  margin: 10px;
+}
+/* line 223, ../sass/client.scss */
+.chesswrapper .info-wrapper .user-info p .head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-right: 10px;
+}

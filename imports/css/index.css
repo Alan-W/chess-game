@@ -1,0 +1,221 @@
+/* line 1, ../adminsass/sass/_admin.scss */
+.login-title {
+  text-align: center;
+}
+
+/* line 4, ../adminsass/sass/_admin.scss */
+.fullOpacity {
+  opacity: 1;
+}
+
+/* line 7, ../adminsass/sass/_admin.scss */
+.zeroOpacity {
+  opacity: 0;
+}
+
+/* line 11, ../adminsass/sass/_admin.scss */
+.top-header {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 2px #6e6e6e solid;
+  background-color: gray;
+}
+/* line 19, ../adminsass/sass/_admin.scss */
+.top-header .imgcontainer {
+  float: left;
+  margin: 10px;
+}
+/* line 22, ../adminsass/sass/_admin.scss */
+.top-header .imgcontainer .comp-logo {
+  width: 40px;
+  height: 40px;
+  background: url("./imports/img/logo.png");
+}
+/* line 30, ../adminsass/sass/_admin.scss */
+.top-header .comp-name {
+  font-size: 15px;
+  color: #eee;
+  float: left;
+  padding: 25px;
+  line-height: 15px;
+}
+/* line 43, ../adminsass/sass/_admin.scss */
+.top-header .log-btn {
+  float: right;
+  margin-top: 12px;
+  margin-right: 20px;
+}
+
+/* line 53, ../adminsass/sass/_admin.scss */
+.left-panel {
+  width: 220px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  height: auto;
+}
+/* line 62, ../adminsass/sass/_admin.scss */
+.left-panel ul li {
+  border-radius: 0px;
+  padding: 0;
+}
+/* line 65, ../adminsass/sass/_admin.scss */
+.left-panel ul li a {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 70, ../adminsass/sass/_admin.scss */
+.left-panel ul li a i {
+  font-size: 15px;
+  margin-right: 10px;
+  width: 16px;
+  vertical-align: middle;
+  text-align: center;
+  top: auto;
+  margin-left: 20px;
+}
+/* line 85, ../adminsass/sass/_admin.scss */
+.left-panel ul a:hover {
+  background-color: #fff;
+  color: #1d2939;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shdow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+/* line 91, ../adminsass/sass/_admin.scss */
+.left-panel ul a:active {
+  background-color: white;
+}
+/* line 94, ../adminsass/sass/_admin.scss */
+.left-panel ul .active-li {
+  background-color: gray;
+  color: white;
+}
+/* line 97, ../adminsass/sass/_admin.scss */
+.left-panel ul .active-li a {
+  background-color: inherit;
+  color: inherit;
+}
+/* line 100, ../adminsass/sass/_admin.scss */
+.left-panel ul .active-li a i {
+  color: inherit;
+}
+
+/* line 108, ../adminsass/sass/_admin.scss */
+.main-container {
+  margin-left: 220px;
+  background-color: #fff;
+  margin-top: 61px;
+  border-left: 1px solid gray;
+  height: auto;
+  background-color: pink;
+}
+/* line 117, ../adminsass/sass/_admin.scss */
+.main-container .container {
+  margin: 10px 0px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* line 127, ../adminsass/sass/_admin.scss */
+.option-container {
+  background-color: yellow;
+}
+/* line 131, ../adminsass/sass/_admin.scss */
+.option-container .left-tab-list {
+  width: 20%;
+  position: fixed;
+  text-align: center;
+}
+/* line 137, ../adminsass/sass/_admin.scss */
+.option-container .right-cont {
+  width: 80%;
+  position: fixed;
+  right: 0;
+}
+
+/* line 2, ../adminsass/sass/_match.scss */
+.match-container .content-area {
+  height: 600px;
+  overflow: hidden;
+}
+/* line 7, ../adminsass/sass/_match.scss */
+.match-container .content-area .item-btn {
+  margin-right: 10px;
+}
+/* line 15, ../adminsass/sass/_match.scss */
+.match-container .content-area table {
+  text-align: center;
+}
+/* line 20, ../adminsass/sass/_match.scss */
+.match-container .fixed-pagination {
+  text-align: center;
+}
+/* line 23, ../adminsass/sass/_match.scss */
+.match-container .nav-bar-container {
+  margin-top: 20px;
+}
+/* line 25, ../adminsass/sass/_match.scss */
+.match-container .nav-bar-container #search-type-text {
+  width: 150px;
+  text-align: center;
+}
+
+/* line 33, ../adminsass/sass/_match.scss */
+.admin-match-edit .match-tab {
+  margin-bottom: 50px;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 16, ../adminsass/sass/_error.scss */
+.errors {
+  position: fixed;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+/* line 25, ../adminsass/sass/_error.scss */
+.errors .error-alert {
+  animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  width: 250px;
+  float: right;
+  clear: both;
+  margin-bottom: 5px;
+  pointer-events: auto;
+}

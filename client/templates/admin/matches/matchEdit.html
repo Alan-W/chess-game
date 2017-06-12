@@ -1,0 +1,45 @@
+<Template name="adminMatchEdit">
+
+	<div class="container admin-match-edit">
+		<div class="jumbotron">
+			{{#if _id}}	
+				赛事编辑
+			{{else}}
+				赛事创建
+			{{/if}}
+		</div>
+		 
+			<div class="row match-tab">
+				<div class="col-md-10">
+					<ul class="nav nav-tabs">
+					  <li role="presentation" class="{{activeTabClass 'baseInfo'}} nav-tab-li" id="baseInfo"><a href="javascript:void(0)">基本信息</a></li>
+					  <li role="presentation" class="{{activeTabClass 'preliminary'}} nav-tab-li" id="preliminary"><a href="javascript:void(0)"> 初赛</a></li>
+					  <li role="presentation" class="{{activeTabClass 'semi-finals'}} nav-tab-li" id = "semi-finals"><a href="javascript:void(0)">复赛</a></li>
+					  <li role="presentation" class="{{activeTabClass 'finals'}} nav-tab-li" id="finals"><a href="javascript:void(0)">决赛</a></li>
+					</ul>	
+				</div>
+			</div>
+
+			<div>
+				{{#unless updateRender}}
+					{{#if activeTabTemplate "baseInfo"}}
+						{{> matchEditBase}}
+					{{/if}}
+					{{#if activeTabTemplate "preliminary"}}
+						{{> matchEditPremilnary}}
+					{{/if}}
+					{{#if activeTabTemplate "semi-finals"}}
+						{{> matchEditSemi}}
+					{{/if}}
+					{{#if activeTabTemplate "finals"}}
+						{{> matchEditFinals}}
+					{{/if}}
+				{{/unless}}	
+			</div>
+		
+		
+		
+<!-- 		{{> matchEditSemi}}
+		{{> matchEditFinals}} -->
+	</div> 
+</Template>

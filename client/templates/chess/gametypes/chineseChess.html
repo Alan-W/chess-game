@@ -1,0 +1,65 @@
+<template name="chineseChess">
+	<div class="chesswrapper" data-roomid = {{_id}}>
+		<div class="chess-box" id="box">
+			<canvas id="chess" width="589" height="653"></canvas>
+		</div>
+
+		<div class="quit-wrapper">
+			<input type = "button" class = "btn btn-danger" id = "quit" value = "退出"/>
+		</div>
+		<div class="prepare-wrapper">
+			<input type="button" class="btn {{#if showState }} btn-disbled {{else}} btn-success {{/if}}" id="prepare" value = "准备" disabled={{showState}} />
+			<!-- <button type="button" class="btn btn-success" id="prepare">准备</button> -->
+		</div>
+		<!-- <div class="begin-wrapper">
+			<input type="button" class="btn btn-warning" id="begin" value="开始" disabled={{showState.begin}} />
+			<button type="button" class="btn btn-warning" id="begin">开始</button>
+		</div> -->
+		<div class="sound-wrapper">
+			<audio src="/sounds/eat.mp3" id="sound_eat">
+				<source type="audio/mp3" src="/sounds/eat.mp3" />
+				<object width="60" height="60" type="application/ogg" data="/sounds/eat.map3">
+					<param name="src" value="/sounds/eat.map3">
+					<div>您的浏览器不支持音效插件</div>
+				</object>
+				
+			</audio>
+			<audio src="/sounds/move.mp3" id="sound_move">
+				<source type="audio/mp3" src="/sounds/move.mp3" />
+				<object width="60" height="60" type="application/ogg" data="/sounds/move.map3">
+					<param name="src" value="/sounds/move.map3">
+					<div>您的浏览器不支持音效插件</div>
+				</object>
+				
+			</audio>
+			<audio src="/sounds/select.mp3" id="sound_select">
+				<source type="audio/mp3" src="/sounds/select.mp3" />
+				<object width="60" height="60" type="application/ogg" data="/sounds/select.map3">
+					<param name="src" value="/sounds/select.map3">
+					<div>您的浏览器不支持音效插件</div>
+				</object>
+			</audio>
+		</div>
+		<div class="info-wrapper">
+			{{#each users}}
+
+				{{# if leagueIs}}
+					<div class="user-info">
+						<p class="nickname"><img src="{{#if this.icon}} this.icon {{else}} /imgs/default_user.jpg {{/if}}" alt="头像" class="head-icon"> {{this.username}}</p>
+						<p class="state">状态: {{#if this.state}} 已准备 {{else}} 未准备 {{/if}}</p>
+						<p class="first-chess">先手: {{#if this.first}} 是 {{else}} 不是 {{/if}}</p>
+						<p class="side">棋子: {{#if this.state}} {{#if this.first}} 红方 {{else}} 黑方 {{/if}} {{else}} 未选择 {{/if}}</p>
+					</div>
+				{{else}}
+					<div class="user-info">
+						<p class="nickname"><img src="{{#if this.icon}} this.icon {{else}} /imgs/default_user.jpg {{/if}}" alt="头像" class="head-icon"> {{this.username}}</p>
+						<p class="state">状态: {{#if this.state}} 已准备 {{else}} 未准备 {{/if}}</p>
+						<p class="first-chess">先手: {{#if this.first}} 是 {{else}} 不是 {{/if}}</p>
+						<p class="side">棋子: {{#if this.state}} {{#if this.first}} 红方 {{else}}  黑方 {{/if}} {{else}} 未选择 {{/if}}</p>
+					</div>
+				{{/if}}
+			{{/each}}
+			
+		</div>
+	</div>
+</template>

@@ -1,0 +1,125 @@
+<template name = "matchEditBase">
+	<div class = "row">
+		<div class="col-md-10  col-xs-10 ">
+			<form class="form-horizontal match-edit-form">
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="matchTitle">赛事标题</label>
+					<div  class="col-sm-8">
+						<input type="text" class="form-control" id="matchTitle" maxlength="15" value={{title}} >	
+					</div>
+					<div class="col-sm-2">
+						<span class="label label-warning">10字以内</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="matchSubtitle">副标题</label>
+					<div  class="col-sm-8">
+						<input type="text" class="form-control" id="matchSubtitle" maxlength="15" value={{subtitle}}>
+					</div>
+					<div class="col-sm-2">
+						<span class="label label-warning">10字以内</span>
+					</div>
+				</div>
+				<div class="form-group" >
+					<label class="col-sm-2 control-label" for="matchDesc">简介</label>
+					<div  class="col-sm-8">
+						<textarea class="form-control" rows="4" id="matchDesc" maxlength="100" value={{content.profile}}></textarea>  
+					</div>
+					<div class="col-sm-2">
+						<span class="label label-warning">100字以内</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="matchType" >比赛类型</label>
+					<div class="col-sm-3">
+						<select class="form-control" value={{gameType}} id="matchType" selected="selected">
+							{{#each gameTypeData}}
+								{{> gameTypeOption}}
+							{{/each}}
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="matchEntry">报名时间</label>
+					<div class="col-sm-4">
+						{{> startDateTimePicker}}	
+					</div>
+					<label class="col-xs-1 control-label">--</label>
+					<div class="col-sm-4">
+						{{> endDateTimePicker}}	
+					</div>
+					
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="minNumber">最低报名人数</label>
+					<div class="col-sm-2">
+						<input type="num" class="form-control" id="minNumber" maxlength="3" minlength="1" value={{minNumber}}>	
+					</div>
+					<label class="col-sm-1 control-label" >人</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="matchStartTime">开始时间</label>
+					<div class="col-sm-4">
+						{{> matchDateTimePicker}}	
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="matchTemplate">规则模版</label>
+					<div class="col-sm-3">
+						<select class="form-control" id="matchTemplate" value={{ruleTemplate}}>
+							<option value ="初赛" {{ruleSelectActive '初赛'}} >初赛</option>
+							<option value ="初赛 + 决赛" {{ruleSelectActive '初赛 + 决赛'}}>初赛 + 决赛</option>
+							<option value ="初赛 + 复赛 + 决赛"  {{ruleSelectActive '初赛 + 复赛 + 决赛'}}>初赛 + 复赛 + 决赛</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5">
+						<button type="submit" class="btn btn-primary">
+						{{#if _id}}
+							修改
+						{{else}}
+							创建
+						{{/if}}
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</template>
+
+
+<Template name="textLengthAlert">
+	<div class="col-sm-2">
+		<span class="label label-warning">{{textShow}}</span>
+	</div>
+</Template>
+<Template name="gameTypeOption">
+	<option value ={{name}} {{selected}}>{{name}}</option>
+</Template>
+<Template name="endDateTimePicker">
+	<div class='input-group date' id='endDateTimePicker'>
+        <input type='text' class="form-control" id="entryEndTime" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+</Template>
+<Template name="startDateTimePicker">
+	<div class='input-group date' id='startDateTimePicker'>
+        <input type='text' class="form-control" id="entryStartTime" />
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+</Template>
+
+<Template name="matchDateTimePicker">
+    <div class='input-group date' id='matchDateTimePicker'>
+        <input type='text' class="form-control" id="matchStartTime"/>
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+</Template>
